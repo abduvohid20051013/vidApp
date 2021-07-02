@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <link rel="stylesheet" href="../public/css/index.css">
+    <style>
+         ::-webkit-scrollbar {
+            width: 2px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background: #424141;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: rgb(90, 90, 90);
+        }
+        
+         ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="headerFirstPart">
+            <button class="menu" type="button">
+    <img src="../public/img/menu.svg" alt="menu" class="menuImg">
+   </button>
+            <button id="youTube" class="youTube">
+    <img class="youTubeImg" src="../public/img/youtube.png" alt="youTube">
+    VideoApp
+   </button>
+        </div>
+        <div class="headerSecondPart">
+            <label>
+    <input class="searchInput" type="text" placeholder="Search">
+    <button class="searchButton" id="searchButton">
+     <img class="searchButtonImg" src="../public/img/search.svg" alt="search">
+    </button>
+   </label>
+            <button class="voiceRec">
+    <img class="voiceRecImg" src="../public/img/microphone.svg" alt="microphone">
+   </button>
+        </div>
+        <div class="headerLastPart">
+            <button class="createVideo">
+    <img class="create" src="../public/img/video.svg" alt="video">
+   </button>
+            <button class="appsButton">
+    <img class="apps" src="../public/img/apps.svg" alt="apps">
+   </button>
+            <button class="bellButton">
+    <img class="bell" src="../public/img/bell.svg" alt="bell">
+   </button>
+            <a href="/register" class="userProfile">
+                <img src="../public/img/user.svg" class="profile" alt="avatarImage">
+            </a>
+        </div>
+    </header>
+    <main class="main">
+        <div class="mainLeftPart">
+            <ul class="usersList">
+
+            </ul>
+        </div>
+        <div class="mainRightPart">
+            <ul class="videosList">
+
+            </ul>
+        </div>
+    </main>
+    <script src="../public/js/request.js"></script>
+    <script src="../public/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="../public/css/admin.css">
+    <style>
+         ::-webkit-scrollbar {
+            width: 2px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background: #424141;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: rgb(90, 90, 90);
+        }
+        
+         ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+    </button>
+    <a href="/" id="youTube" class="youTube">
+        <img class="youTubeImg" src="../public/img/youtube.png" alt="youTube"> VideoApp
+    </a>
+    <h1 class="title">Video upload page</h1>
+    <div class="wrapper">
+        <form id="form">
+            <div class="imageVrap">
+
+            </div>
+            <input type="text" class="videoNameInput" placeholder="Enter the video title..." name="videoTitle">
+            <label class="upload">
+   <p class="videoInputText">Upload your video...!</p>
+   <input type="file"style="display:none"id="videoUpload" name="videoUpload" accept="video/*">
+  </label>
+            <button class="button" type="send" id="send">Add video</button>
+        </form>
+        <div class="rightPart">
+            <h1>Your videos</h1>
+            <div class="mainRightPart">
+                <ul class="videosList">
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <script src="../public/js/request.js"></script>
+    <script src="../public/js/admin.js"></script>
+    <script>
+        const videosList = document.querySelector('.videosList'),
+            profileImg = document.querySelector('.profile'),
+            imageVrap = document.querySelector('.imageVrap'),
+            avatarText = document.querySelector('.avatarText'),
+            image = document.querySelector('.image')
+
+        let user = window.localStorage.getItem('user')
+        user = user ? JSON.parse(user) : {}
+
+        function videosRenderer(array, username, userImg) {
+            let string = ""
+            array.map(video => {
+                string +=
+                    ` <li class="video">
+    <div class="videoWrapper">
+     <video controls  src=${'../upload/uploadedVideo/' + video.video_link} type="video/*">
+     </video>
+    </div>
+    <div class="userTextsWrapper">
+     <div class="userTextsWrap">
+      <span class="userNameWrap">
+       <img class="userImg" src=${'../upload/uploadedImages/' + video.user.userImg} alt="img">
+       <p class="videoName">${video.title}</p>
+      </span>
+      <p class="userName">${video.user.username[0].toUpperCase() + video.user.username.slice(1, video.user.username.length)}</p>
+     </div>
+     <div class="downloadWrap">
+      <a class="download" href="download?link=${video.video_link}">
+       <img src="../public/img/download.svg" alt="download" class="downlodImg" width="30" height="30">
+      </a>
+     </div>
+    </div>
+   </li>`
+            })
+
+            videosList.innerHTML = string
+        }
+
+        function usersRenderer(array) {
+            let string =
+                `
+                <div class="image"  id=${user.user_id}>
+                    <span class="imgWrap"><img  src=${'../upload/uploadedImages/' + user.userImg} alt="img" width="60" height="60" class="profile"></span>
+                    <p class="avatarText">${user.username}</p>
+                </div>
+               `
+            imageVrap.innerHTML = string
+            const image = document.querySelector('.image')
+            if (image.id) {
+                let currentUser = array.find(user => user.user_id == image.id)
+                videosRenderer(currentUser.videos, currentUser.username, currentUser.userImg)
+            } else getData()
+        }
+
+
+
+        async function getData() {
+            let response = await request('/videos')
+            videosRenderer(response)
+        }
+        async function getUsers() {
+            let response = await request('/users')
+            usersRenderer(response)
+        }
+        getData()
+        getUsers()
+    </script>
+</body>
+
+</html>

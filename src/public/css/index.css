@@ -1,0 +1,348 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+* video {
+    width: 350px;
+    height: 230px;
+    border-bottom: 3px solid rgba(75, 75, 75, 0.2);
+}
+
+body {
+    background-color: #181818;
+    background-image: linear-gradient(to bottom, rgba(34, 31, 31, 10), rgba(0, 0, 0, 0.4)), url("../img/img8.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+    height: 99vh;
+}
+
+body .header {
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3 solid rgb(0, 0, 0);
+    background-color: transparent;
+}
+
+body .header div {
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body .header div button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+body .header div button img {
+    width: 25px;
+}
+
+body .header .headerFirstPart {
+    margin-left: 5px;
+}
+
+body .header .headerFirstPart .menu {
+    padding: 10px 12px;
+    padding-top: 13px;
+    border-radius: 50%;
+}
+
+body .header .headerFirstPart .menu:active {
+    background-color: #313131;
+}
+
+body .header .headerFirstPart .youTube {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 27px;
+    font-weight: bold;
+    color: #acacac;
+}
+
+body .header .headerFirstPart .youTube img {
+    width: 50px;
+    padding-right: 3px;
+}
+
+body .header .headerSecondPart {
+    display: flex;
+}
+
+body .header .headerSecondPart label {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    box-shadow: 5px 5px 10px black, -1px 0 10px black;
+    border: 3px solid rgba(75, 75, 75, 0.2);
+}
+
+body .header .headerSecondPart label input {
+    background-color: transparent;
+    outline: none;
+    padding: 4px 15px;
+    font-size: 20px;
+    width: 30vw;
+    color: lightgrey;
+    border: none;
+    outline: none;
+}
+
+body .header .headerSecondPart label button {
+    background-color: #313131;
+    padding: 7.5px 16px;
+}
+
+body .header .headerSecondPart label img {
+    width: 15px;
+}
+
+body .header .headerLastPart button {
+    margin-right: 23px;
+}
+
+body .header .headerLastPart button img {
+    width: 24px;
+}
+
+body .header .headerLastPart a {
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+
+body .header .headerLastPart a .profile {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border: 3px solid rgb(104, 104, 104);
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+body main {
+    display: flex;
+    min-height: 87%;
+    height: 90%;
+    overflow-y: hidden;
+    width: 100%;
+    border-top: 5px solid rgb(49, 49, 49);
+}
+
+body main .mainLeftPart {
+    display: block;
+    width: 16%;
+    background-color: transparent;
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+body main .mainLeftPart ul {
+    border-bottom: 2px solid #393838;
+    padding: 5px 0;
+    color: #909090;
+}
+
+body main .mainLeftPart ul .focused {
+    background-color: rgba(75, 75, 75, 0.4);
+    margin-top: 10px;
+}
+
+body main .mainLeftPart ul .items {
+    padding: 18px 0;
+    transition: background-color 0s ease;
+    cursor: pointer;
+}
+
+body main .mainLeftPart ul .items:hover {
+    background-color: rgba(75, 75, 75, 0.4);
+}
+
+body main .mainLeftPart ul .items button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 15px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+body main .mainLeftPart ul .items button .text {
+    color: lightgrey;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+body main .mainLeftPart ul .items button .imag {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    margin-left: 5px;
+    border-radius: 50%;
+    border: 3px solid rgb(104, 104, 104);
+    cursor: pointer;
+}
+
+body main .mainLeftPart ul .items button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 18px;
+    margin-left: 10px;
+}
+
+body main .mainRightPart {
+    width: 84%;
+    margin-left: auto;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px black, -1px 0 10px black;
+}
+
+body main .mainRightPart ul {
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+body main .mainRightPart ul li {
+    margin: 8px;
+    max-height: 320px;
+    box-shadow: 5px 5px 10px black, -1px 0 10px black;
+    border: 3px solid rgba(75, 75, 75, 0.2);
+}
+
+body main .mainRightPart ul li .videoWrapper {
+    width: 350px;
+    height: 230px;
+    position: relative;
+}
+
+body main .mainRightPart ul li p {
+    padding-left: 47px;
+    font-size: 17px;
+    flex-wrap: 500;
+    color: lightgrey;
+}
+
+body main .mainRightPart ul li .userNameWrap {
+    display: flex;
+    align-items: center;
+}
+
+body main .mainRightPart ul li .userNameWrap p {
+    padding-left: 7px;
+    font-size: 21px;
+    color: white;
+}
+
+body main .mainRightPart ul li .userNameWrap img {
+    width: 50px;
+    height: 50px;
+    border: 3px solid gray;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.userTextsWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.downloadWrap p {
+    padding-top: 10px;
+}
+
+.downloadWrap .download {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.downlodImg {
+    margin-left: 50px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+    .mainLeftPart {
+        display: none !important;
+    }
+    .mainRightPart {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .headerSecondPart {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu {
+        display: none !important;
+    }
+    .youTube {
+        margin-left: -10px !important;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .videoWrapper {
+        max-width: 320px;
+        max-height: 200px;
+    }
+    video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .videoWrapper {
+        max-width: 300px;
+        max-height: 180px;
+    }
+    video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .videoWrapper {
+        max-width: 250px;
+        max-height: 150px;
+    }
+    video {
+        width: 100%;
+        height: 100%;
+    }
+}

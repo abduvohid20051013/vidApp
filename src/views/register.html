@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../public/css/register.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form id="form">
+            <label class="upload">
+                <span class="imgWrap"><img class="avtarImg" src="../public/img/user.svg" alt="img" width="60" height="60"></span>
+                <p class="chooseText">Choose your avatar image!</p>
+                <input type="file" class="imgInput" id="upload" style="display:none"id="avatar" name="avatar" accept="image/*">
+            </label>
+            <input type="text" class="usernameInput" placeholder="Type your Username..." name="username">
+            <input type="email" class="emailInput" placeholder="Type your email..." name="email" required>
+            <input type="password" class="passwordInput" placeholder="Type your password..." name="password" required>
+            <button type="submit" id="btn">Sign up</button>
+        </form>
+        <div class="rightPart">
+            <h1 class="leftTitle">Sing up for video uploads</h1>
+            <p class="text">Lorem ipsum dolor, Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, quod. sit amet consectetur adipisicing elit. Ad quod maiores assumenda ratione suscipit pariatur odio laudantium minus minima fugiat?</p>
+
+        </div>
+    </div>
+    <script src="../public/js/request.js"></script>
+    <script src="../public/js/register.js"></script>
+</body>
+
+</html>

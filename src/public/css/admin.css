@@ -1,0 +1,287 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+* video {
+    width: 350px;
+    height: 230px;
+}
+
+body {
+    background-image: linear-gradient(to bottom, rgba(34, 31, 31, 10), rgba(0, 0, 0, 0.4)), url("../img/img8.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title {
+    font-size: 65px;
+    color: rgb(161, 153, 153);
+    font-weight: bolder;
+    padding-bottom: 50px;
+}
+
+.wrapper {
+    background-image: linear-gradient(to left, rgba(34, 31, 31, 7), rgba(61, 49, 49, 0.4)), url("../img/img8.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 5px 5px 15px 5px rgb(75, 75, 75), -5px -5px 15px 5px rgb(75, 75, 75);
+}
+
+.rightPart {
+    background-image: linear-gradient(to bottom, rgba(34, 31, 31, 6), rgba(24, 23, 23, 0.5));
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 71%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 0px 10px black;
+}
+
+.rightPart h1 {
+    font-size: 60px;
+    color: rgb(161, 153, 153);
+    margin-bottom: 10px;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    width: 100%;
+    box-shadow: 1px 5px 10px black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 29%;
+    height: 100%;
+    box-shadow: 1px 0px 10px black;
+}
+
+.image {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image p {
+    color: rgb(161, 153, 153);
+    font-size: 30px;
+    font-weight: bolder;
+    line-height: 27px;
+    padding-top: 20px;
+}
+
+.upload p {
+    text-align: center;
+    padding-top: 10px;
+    color: rgb(161, 153, 153);
+    font-size: 30px;
+    font-weight: bolder;
+    line-height: 27px;
+}
+
+.image img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+input {
+    background-color: transparent!important;
+    border: none;
+    outline: none;
+    width: 75%;
+    height: 100px;
+    padding: 20px 15px;
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: bolder;
+    box-shadow: 5px 5px 10px black, -1px 0 10px black;
+    color: rgb(161, 153, 153);
+}
+
+.upload {
+    background-color: transparent!important;
+    border: none;
+    outline: none;
+    width: 75%;
+    height: 100px;
+    padding: 20px 15px;
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: bolder;
+    box-shadow: 5px 5px 10px black, -1px 0 10px black;
+    color: rgb(161, 153, 153);
+}
+
+.imgWrap {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(34, 34, 34);
+    box-shadow: 5px 5px 10px rgb(65, 65, 65), -1px 0 10px rgb(66, 66, 66);
+}
+
+input::placeholder {
+    color: rgb(161, 153, 153);
+}
+
+.button {
+    background-color: transparent!important;
+    border: none;
+    outline: none;
+    width: 50%;
+    height: 100px;
+    padding: 20px 20px;
+    margin-top: 35px;
+    font-size: 40px;
+    font-weight: bolder;
+    box-shadow: 5px 5px 10px black, -1px 0 10px black;
+    cursor: pointer;
+    color: rgb(161, 153, 153);
+}
+
+.videosWrapper {
+    width: 100%;
+    height: auto;
+}
+
+.mainRightPart {
+    width: 100%;
+    margin-left: auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+.mainRightPart ul {
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+.mainRightPart ul li {
+    margin: 9px;
+    max-height: 325px;
+}
+
+.mainRightPart ul li .videoWrapper {
+    width: 350px;
+    height: 230px;
+    position: relative;
+}
+
+.mainRightPart ul li p {
+    padding-left: 47px;
+    font-size: 17px;
+    flex-wrap: 500;
+    color: lightgrey;
+}
+
+.mainRightPart ul li .userNameWrap {
+    display: flex;
+    align-items: center;
+}
+
+.mainRightPart ul li .userNameWrap p {
+    padding-left: 7px;
+    font-size: 21px;
+    color: white;
+}
+
+.mainRightPart ul li .userNameWrap img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid gray;
+    margin-top: 10px;
+}
+
+.userTextsWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.downloadWrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.downloadWrap .download {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.downlodImg {
+    margin-left: 50px;
+    margin-right: 5px;
+    margin-top: 20px;
+}
+
+.delete {
+    background-color: transparent;
+    padding: 5px 7px;
+    outline: none;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: -8px;
+}
+
+.video {
+    box-shadow: 5px 5px 10px black, -1px 0 10px black;
+}
+
+.youTube {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    font-size: 27px;
+    font-weight: bold;
+    color: #acacac;
+    cursor: pointer;
+    position: absolute;
+    top: 4%;
+    left: 3.9%;
+    padding: 15px 20px;
+}
+
+.youTube img {
+    padding-right: 3px;
+}
